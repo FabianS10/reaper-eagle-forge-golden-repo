@@ -1,0 +1,2 @@
+# Minimal dependency for the portable benchmark.
+torch
