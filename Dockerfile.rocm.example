@@ -1,0 +1,7 @@
+# Example only. Pin the exact ROCm/PyTorch image used by your benchmark environment.
+FROM rocm/pytorch:latest
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["python", "src/forge_portable_benchmark.py", "--batch-size", "32", "--warmup", "5", "--runs", "30", "--precision", "fp32"]
