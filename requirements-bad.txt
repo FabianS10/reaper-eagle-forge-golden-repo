@@ -1,0 +1,4 @@
+# Intentionally vendor-shaped dependencies for Forge ML scanner testing.
+torch
+tensorrt
+cupy-cuda12x
