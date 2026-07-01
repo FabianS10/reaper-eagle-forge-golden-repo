@@ -1,7 +1,18 @@
 __pycache__/
 *.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .venv/
 venv/
+
+# Local evidence captures should not be committed unless intentionally promoted
+# into manifests/*.example.json for replay documentation.
 forge_local_evidence/
 forge_mi300x_evidence/
 manifests/benchmark_results.json
+
+# Secrets and local environment overrides.
+.env
+.env.*
+!.env.example
