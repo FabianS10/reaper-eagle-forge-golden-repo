@@ -1,2 +1,3 @@
-# Minimal dependency for the portable benchmark.
-torch
+# Minimal dependency set for the safe portable benchmark path.
+# Keep vendor-specific fixtures in requirements-bad.txt as comments only.
+torch>=2.3,<3.0
