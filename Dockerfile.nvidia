@@ -1,6 +1,13 @@
+# Synthetic NVIDIA-shaped Dockerfile fixture for Forge ML scanner testing.
+#
+# This file is intentionally not the default container path. It exists so Forge
+# can detect CUDA base images and NVIDIA-only assumptions without making this
+# repository unsafe or expensive to build in normal demo workflows.
+
 FROM nvidia/cuda:12.4.1-cudnn-runtime-ubuntu22.04
+
 WORKDIR /app
-COPY requirements-bad.txt .
-RUN pip install --no-cache-dir -r requirements-bad.txt
-COPY . .
-CMD ["python", "src/nvidia_locked_benchmark.py"]
+COPY requirements-bad.txt /tmp/requirements-bad.txt
+COPY src/nvidia_locked_benchmark.py /app/src/nvidia_locked_benchmark.py
+
+CMD ["python", "-c", "print('Synthetic NVIDIA-locked fixture only. Use Dockerfile for the safe portable path.')"]
