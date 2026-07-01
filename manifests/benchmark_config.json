@@ -1,0 +1,10 @@
+{
+  "benchmark_name": "forge_portable_tiny_mlp",
+  "model": "TinyModel Linear(1024->2048->1024)",
+  "batch_size": 32,
+  "precision": "fp32",
+  "warmup_count": 5,
+  "timed_runs": 30,
+  "input_manifest": "synthetic torch.randn tensor, shape [32, 1024]",
+  "notes": "For MI300X evidence capture, record GPU name, ROCm version, PyTorch version, torch.version.hip, p50/p95 latency, and throughput."
+}
