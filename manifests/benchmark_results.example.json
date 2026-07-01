@@ -1,0 +1,23 @@
+{
+  "benchmark_name": "forge_portable_tiny_mlp",
+  "capture_mode": "replay_example",
+  "device_backend": "cpu",
+  "device_type": "cpu",
+  "torch_version": "example",
+  "torch_hip_version": null,
+  "batch_size": 8,
+  "precision": "fp32",
+  "warmup_count": 2,
+  "timed_runs": 5,
+  "p50_latency_ms": 1.23,
+  "p95_latency_ms": 1.41,
+  "throughput_items_per_second": 5700.0,
+  "latencies_ms": [
+    1.19,
+    1.22,
+    1.23,
+    1.29,
+    1.41
+  ],
+  "claim_status": "example_only_not_a_live_performance_claim"
+}
