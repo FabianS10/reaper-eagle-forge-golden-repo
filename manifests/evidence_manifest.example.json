@@ -1,0 +1,34 @@
+{
+  "schema_version": "forge-evidence-v1",
+  "artifact_id": "forge-golden-repo-replay-example",
+  "repository": "FabianS10/reaper-eagle-forge-golden-repo",
+  "capture_mode": "replay_example",
+  "live_execution": false,
+  "hardware_profile": {
+    "provider": "example",
+    "accelerator": "none",
+    "backend": "cpu",
+    "notes": "This manifest is a replay example only. Replace with MI300X/ROCm metadata after live capture."
+  },
+  "benchmark_result": {
+    "path": "manifests/benchmark_results.example.json",
+    "sha256": "f4bad081c130b251fe45cbbfb2454944cd0b77168de528a048a8c0b551ae4300"
+  },
+  "allowed_claims": [
+    "The repository includes an isolated NVIDIA-shaped fixture path for static analysis.",
+    "The repository includes a safer portable PyTorch benchmark path.",
+    "The included benchmark result is replay/example evidence, not a live performance claim."
+  ],
+  "blocked_claims": [
+    "This evidence proves AMD MI300X is faster than another GPU.",
+    "This evidence proves production deployment readiness.",
+    "This evidence proves full CUDA-to-ROCm migration is complete."
+  ],
+  "required_next_evidence": [
+    "Live MI300X run metadata",
+    "ROCm and PyTorch version capture",
+    "Repeated trials with p50 and p95 latency",
+    "Environment hash or container digest",
+    "Raw logs linked to the exported result"
+  ]
+}
