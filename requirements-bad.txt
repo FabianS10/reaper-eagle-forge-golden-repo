@@ -1,4 +1,12 @@
-# Intentionally vendor-shaped dependencies for Forge ML scanner testing.
-torch
-tensorrt
-cupy-cuda12x
+# Synthetic vendor-lock-in fixture for Forge ML scanner testing.
+#
+# This file is intentionally NOT an installable requirements file.
+# The dependency names are commented so GitHub dependency tooling and CI do not
+# treat them as real project dependencies, while Forge can still detect the
+# NVIDIA/CUDA-shaped assumptions during static analysis.
+#
+# Forge should flag these as vendor-specific risk signals:
+# tensorrt
+# cupy-cuda12x
+# nvidia-cudnn-cu12
+# nvidia-cublas-cu12
