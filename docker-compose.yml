@@ -1,0 +1,17 @@
+services:
+  forge-golden-benchmark:
+    build: .
+    container_name: forge-golden-benchmark
+    volumes:
+      - ./manifests:/app/manifests
+    command:
+      - python
+      - src/forge_portable_benchmark.py
+      - --batch-size
+      - "8"
+      - --warmup
+      - "2"
+      - --runs
+      - "5"
+      - --output
+      - manifests/benchmark_results.json
